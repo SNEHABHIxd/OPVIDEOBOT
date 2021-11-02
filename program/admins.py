@@ -90,7 +90,7 @@ async def pause(client, m: Message):
       
 @Client.on_message(
   
-    command(["stop", f"stop@SNEHABHI_BOT", "end", f"end@SNEHABHI_VIDEOBOT", "vstop"])
+    command(["stop", f"stop@SNEHABHI_BOT", "end", f"end@SNEHABHI_BOT", "vstop"])
     & other_filters
 )
 @authorized_users_only
