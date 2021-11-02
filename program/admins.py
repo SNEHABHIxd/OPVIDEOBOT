@@ -55,7 +55,7 @@ async def skip(client, m: Message):
           )
           
 @Client.on_message(
-    command(["pause", f"pause@SNEHABHI_VIDEOBOT", "vpause"]) & other_filters
+    command(["pause", f"pause@SNEHABHI_BOT", "vpause"]) & other_filters
 )
 @authorized_users_only
 async def pause(client, m: Message):
@@ -72,7 +72,7 @@ async def pause(client, m: Message):
         await m.reply("❌ **𝙽𝙾𝚃𝙷𝙸𝙽𝙶 𝙸𝙽 𝚂𝚃𝚁𝙴𝙰𝙼𝙸𝙽𝙶 𝚄𝙿𝙻𝙾𝙰𝙳 𝙱𝚈 @SNEHABHI_UPDATES**")
               
 @Client.on_message(
-    command(["resume", f"resume@SNEHABHI_VIDEOBOT", "vresume"]) & other_filters
+    command(["resume", f"resume@SNEHABHI_BOT", "vresume"]) & other_filters
 )  
 @authorized_users_only
 async def pause(client, m: Message):
@@ -90,7 +90,7 @@ async def pause(client, m: Message):
       
 @Client.on_message(
   
-    command(["stop", f"stop@SNEHABHI_VIDEOBOT", "end", f"end@SNEHABHI_VIDEOBOT", "vstop"])
+    command(["stop", f"stop@SNEHABHI_BOT", "end", f"end@SNEHABHI_VIDEOBOT", "vstop"])
     & other_filters
 )
 @authorized_users_only
@@ -108,7 +108,7 @@ async def stop(client, m: Message):
         
 @Client.on_message(
 
-    command(["mute", f"mute@SNEHABHI_VIDEOBOT", "vmute"]) & other_filters
+    command(["mute", f"mute@SNEHABHI_BOT", "vmute"]) & other_filters
 
 )
 
@@ -140,7 +140,7 @@ async def mute(client, m: Message):
 
 @Client.on_message(
 
-    command(["unmute", f"unmute@SNEHABHI_VIDEOBOT", "vunmute"]) & other_filters
+    command(["unmute", f"unmute@SNEHABHI_BOT", "vunmute"]) & other_filters
 
 )
 
@@ -172,7 +172,7 @@ async def unmute(client, m: Message):
 
 @Client.on_message(
 
-    command(["volume", f"volume@SNEHABHI_VIDEOBOT", "vol"]) & other_filters
+    command(["volume", f"volume@SNEHABHI_BOT", "vol"]) & other_filters
 
 )
 
