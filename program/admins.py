@@ -23,7 +23,7 @@ async def update_admin(client, message):
     )
     
 
-@Client.on_message(command(["skip", f"skip@SNEHABHI_VIDEOBOT", "vskip"]) & other_filters)
+@Client.on_message(command(["skip", f"skip@SNEHABHI_BOT", "vskip"]) & other_filters)
 @authorized_users_only
 async def skip(client, m: Message):
   
@@ -40,9 +40,25 @@ async def skip(client, m: Message):
         ]
       )
       
-    chat_id = m.chat.id
-    if len(m.command) < 2:
-    op = await skip_current_song(chat_id)
-    if op == 0:
-    await m.reply("❌ 𝙽𝙾𝚃𝙷𝙸𝙽𝙶 𝙸𝚂 𝙲𝚄𝚁𝚁𝙴𝙽𝚃𝙻𝚈 𝙿𝙻𝙰𝚈𝙸𝙽𝙶")
+  chat_id = m.chat.id
+  if len(m.command) < 2:
+      op = await skip_current_song(chat_id)
+      if op == 0:
+          await m.reply("❌ 𝙽𝙾𝚃𝙷𝙸𝙽𝙶 𝙸𝚂 𝙲𝚄𝚁𝚁𝙴𝙽𝚃𝙻𝚈 𝙿𝙻𝙰𝚈𝙸𝙽𝙶")
+      elif op == 1:
+          await m.reply("✅ __𝚀𝚄𝙴𝚄𝙴𝚂__ 𝙸𝚂 𝙴𝙼𝙿𝚃𝚈.\n\n• 𝚂𝙽𝙴𝙷𝙰𝙱𝙷𝙸 𝚄𝚂𝙴𝚁𝙱𝙾𝚃 𝙻𝙴𝙰𝚅𝙸𝙽𝙶 𝚅𝙲")
+      else:
+          await m.reply_photo(
+              photo=f"{IMG_3}",
+              caption=f"⏭ 𝚂𝙺𝙸𝙿𝙿𝙴𝙳 𝚃𝙾 𝚃𝙷𝙴 𝙽𝙴𝚇𝚃 𝚃𝚁𝙰𝙲𝙺.\n\n🏷 𝙽𝙰𝙼𝙴: [{op[0]}]({op[1]})\n💭 𝙲𝙷𝙰𝚃: {chat_id}\n💡 𝚂𝚃𝙰𝚃𝚄𝚂: 𝙿𝙻𝙰𝚈𝙸𝙽𝙶\n🎧 𝚁𝙴𝚀𝚄𝙴𝚂𝚃 𝙱𝚈: {m.from_user.mention()}",
+              reply_markup=keyboard,
+          )
+          
+@Client.on_message(
+    command(["pause", f"pause@SNEHABHI_VIDEOBOT", "vpause"]) & other_filters
+)
+
+
+
+    
       
