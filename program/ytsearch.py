@@ -28,7 +28,7 @@ logger = logging.getLogger(__name__)
 
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
-@Client.on_message(command(["search", f"search@SNEHABHI_VIDEOBOT"]))
+@Client.on_message(command(["search", f"search@SNEHABHI_BOT"]))
 
 async def ytsearch(_, message: Message):
 
