@@ -14,7 +14,7 @@ from pyrogram.errors import UserAlreadyParticipant
 
 @Client.on_message(
 
-    command(["userbotjoin", f"userbotjoin@SNEHABHI_VIDEOBOT"]) & ~filters.private & ~filters.bot
+    command(["userbotjoin", f"userbotjoin@SNEHABHI_BOT"]) & ~filters.private & ~filters.bot
 
 )
 
@@ -78,7 +78,7 @@ async def join_group(client, message):
 
 @Client.on_message(command(["userbotleave",
 
-                            f"leave@SNEHABHI_VIDEOBOT"]) & filters.group & ~filters.edited)
+                            f"leave@SNEHABHI_BOT"]) & filters.group & ~filters.edited)
 
 @authorized_users_only
 
@@ -100,7 +100,7 @@ async def leave_one(client, message):
 
         return
 
-@Client.on_message(command(["leaveall", f"leaveall@SNEHABHI_VIDEOBOT"]))
+@Client.on_message(command(["leaveall", f"leaveall@SNEHABHI_BOT"]))
 
 @sudo_users_only
 
