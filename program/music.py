@@ -78,7 +78,7 @@ async def ytdl(link):
 
         return 0, stderr.decode()
 
-@Client.on_message(command(["play", f"play@SNEHABHI_VIDEOBOT"]) & other_filters)
+@Client.on_message(command(["play", f"play@SNEHABHI_BOT"]) & other_filters)
 
 async def play(_, m: Message):
 
